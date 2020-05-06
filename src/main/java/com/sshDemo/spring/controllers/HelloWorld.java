@@ -13,11 +13,11 @@ import java.util.Map;
  */
 @RestController
 public class HelloWorld {
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public Map helloWorld() {
         Map<String, Object> ret = new HashMap<>();
         ret.put("ret", "Hello World");
         return ret;
     }
-
 }
+

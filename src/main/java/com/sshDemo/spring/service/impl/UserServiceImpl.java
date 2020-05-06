@@ -1,7 +1,8 @@
-package com.sshDemo.spring.service;
+package com.sshDemo.spring.service.impl;
 
-import com.sshDemo.spring.dao.UserDao;
+import com.sshDemo.spring.dao.UserMapper;
 import com.sshDemo.spring.model.User;
+import com.sshDemo.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +15,11 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserDao userDao;
+    private UserMapper userMapper;
 
     @Override
     public List<User> getAll() {
-        return userDao.getAll();
+        return userMapper.getAll();
     }
 
 }
